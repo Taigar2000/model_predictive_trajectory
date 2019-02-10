@@ -1,0 +1,2 @@
+int traektor_size=8;
+float traektor[]={ 0.0, -0.0, 0.0, -0.0, -0.0, 0.0, 0.0, 0.0};
