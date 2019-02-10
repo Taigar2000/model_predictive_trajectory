@@ -144,40 +144,40 @@ class Simplify:
     def identity(self, a):
         #print(a)
         #print(len(self.nopl))
-        return self.nopl[a]
-    
+        return str(self.nopl[a])
+    
     def pow_two(self, a):
-        return self.nopl[a] ** 2
-        
+        return str(self.nopl[a])+ "**2"
+        
     def negative(self, a):
-        return 0-self.nopl[a]
-    
+        return "0-"+str(self.nopl[a])
+    
     def irer(self, a):
-        return (self.nopl[a])/(np.fabs(self.nopl[a])) * sqrt(np.fabs(self.nopl[a]))
-        
+        return "(" + str(self.nopl[a]) + ")/(np.fabs(" + str(self.nopl[a])")) * sqrt(fabs("+str(self.nopl[a])+"))"
+        
     def reverse(self, x):
-        return 1/(self.nopl[x])
-        
+        return "1/("+str(self.nopl[x])+")"
+        
     def exp(self, a):
-        return math.exp(self.nopl[a])
-    
+        return "exp(" + str(self.nopl[a])+")"
+    
     def expm1(self, x):
-        return math.expm1(self.nopl[x])
-        
+        return "expm1(" + str(self.nopl[x])+")"
+        
     def exp2(self, x):
-        return 2**(self.nopl[x])
-        
-    def sign(self, x):
-        x = (self.nopl[x])/fabs(self.nopl[x])
-        return x
-    
-    def natlog(self, a):
-        return math.log(self.nopl[a]) 
+        return "2**(" + str(self.nopl[x]) + ")"
+        
+    def sign(self, x):
+        #x = (self.nopl[x])/fabs(self.nopl[x])
+        return "(" + str(self.nopl[x]) + ")/fabs(" + str(self.nopl[x]) + ")"
+    
+    def natlog(self, a):
+        return "log(" + str(self.nopl[a]) + ")" 
     def log10(self, x):
-        return np.log10(self.nopl[x])
-    def log2(self, x):
-        return math.log2(self.nopl[x])
-    def log1p(self, x):
+        return "log10(" + str(self.nopl[x]) + ")"
+    def log2(self, x):
+        return "log2(" + str(self.nopl[x]) + ")"
+    def log1p(self, x):
         return "log1p("+str(self.nopl[x])+")"
     
     def logic(self, a):
@@ -186,37 +186,38 @@ class Simplify:
         return 'logic('+str(self.nopl[a])+')'
         
     def cosinus(self, a):
-        return np.cos(self.nopl[a])
-    
+        return "cos(" + str(self.nopl[a]) + ")"
+    
     def sinus(self, a):
-        return math.sin(self.nopl[a])
-    
+        return "sin(" + str(self.nopl[a]) + ")"
+    
     def tan(self, x):
-        return math.tan(self.nopl[x])
-        
+        return "tan(" + str(self.nopl[x]) + ")"
+        
     def tanh(self, x):
-        return np.tanh(self.nopl[x])
-    
+        return "tanh(" + str(self.nopl[x]) + ")"
+    
     def cubicroot(self, a):
-        return (self.nopl[a])**(1/3)
-    
+        return "(" + str(self.nopl[a]) + ")**(1/3)"
+    
     def atan(self, x):
-        return math.atan(self.nopl[x])
-    
+        return "atan(" + str(self.nopl[x]) + ")"
+    
     def cubic(self, a):
-        return self.nopl[a]**3
-        
+        return "(" + str(self.nopl[a]) + ")**3)"
+        
     def absolute(self, a):
-        return np.fabs(self.nopl[a])
-    def sinc(self, x):
-        return sinc(self.nopl[x])
-    
+        return "fabs(" + str(self.nopl[a]) + ")"
+    def sinc(self, x):
+        return "sinc(" + str(self.nopl[x]) + ")"
+    
     def inv(self, x):
-        return (self.nopl[x]**(-1))
-    
-    def l(self, x):
-        return L
-    
+        return "(" + str(self.nopl[x]) + ")**(-1)"
+    
+    #Constant functions
+    def l(self, x):
+        return str(L)
+    
     def one(self, x):
         return 1.0
     
